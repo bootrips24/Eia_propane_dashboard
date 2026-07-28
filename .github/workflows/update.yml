@@ -1,4 +1,13 @@
+permissions:
+  contents: write
+
 name: Update propane data
+
+on:
+  schedule:
+    - cron: '30 15 * * 3'
+  workflow_dispatch:
+...name: Update propane data
 
 on:
   schedule:
