@@ -1,18 +1,12 @@
+name: Update propane data
+
 permissions:
   contents: write
-
-name: Update propane data
 
 on:
   schedule:
     - cron: '30 15 * * 3'
   workflow_dispatch:
-...name: Update propane data
-
-on:
-  schedule:
-    - cron: '30 15 * * 3'   # 15:30 UTC = 10:30am ET, every Wednesday
-  workflow_dispatch:         # lets you also trigger it manually with a button
 
 jobs:
   update:
