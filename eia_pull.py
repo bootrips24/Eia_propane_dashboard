@@ -22,11 +22,13 @@ import requests
 API_URL = "https://api.eia.gov/v2/petroleum/stoc/wstk/data/"
 OUTPUT_FILE = "propane_dashboard.csv"
 
-# EIA facet codes: EPLLPZ = propane/propylene, NUS = US total, SAE = Ending Stocks
-# (confirmed against /v2/petroleum/stoc/wstk/facet/product/ and /facet/duoarea/)
+# EIA facet codes: EPLLPZ = propane/propylene, NUS = US total,
+# SAXP = "Ending Stocks Excluding Propylene at Terminal" (series WPRSTUS1) —
+# this is the actively-published weekly series; the SAE process code was
+# discontinued around April 2020 and no longer updates.
 PRODUCT_CODE = "EPLLPZ"
 AREA_CODE = "NUS"
-PROCESS_CODE = "SAE"
+PROCESS_CODE = "SAXP"
 
 
 def get_api_key() -> str:
